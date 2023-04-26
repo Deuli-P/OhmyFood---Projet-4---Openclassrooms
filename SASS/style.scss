@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: Roboto, sans-serif;
 }
 
 $gris-clair-color: #F6F6F6;
@@ -10,60 +10,110 @@ $vert-fonce-color: #008766;
 $vert-clair-color: #99E2D0;
 $bleu-clair-color: #89C8FA;
 $bleu-fonce-color: #003A68;
-$gris-fonce-color: #EAEAEA;
+$gris-fonce-color: #353535;
 $linear-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+;
 
+@mixin bouton-gradiant {
+    background: $linear-gradiant;
+    border-radius: 25px;
+    padding: 13px 18.75px;
+    color: white;
+    :hover {
+     background-color: $gris-fonce-color;
+        
+    }
+}
 
+@mixin fonctionnement-card {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+    margin-top: 25px;
+}
+@mixin fonctionnement-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-left:35px;
+}
 body {
-    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
 }
 
 h1 {
     font-weight: 700;
     line-height:28.13px;
-    font-size: 24px;
-    font-family: Roboto;
+    font-size: 24px;    
 }
 
 h2 {
     font-weight: 500;
     line-height: 18.75px;
     font-size: 16px;
-    font-family: Roboto;
+}
+
+h3 {
+    font-weight: 300;
+    line-height:21.09px;
+    font-size: 18px;
 }
 
 p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
 
-}
-
-
-h1 {
-    font-weight: 700;
-    line-height:28.13px;
-    font-size: 24px;
-    font-family: Roboto;
 }
 
 .fa-solid {
     color:#353535
 }
+
+a {
+    text-decoration: none;
+}
+
+input {
+    border: none;
+    font-weight: 500;
+    line-height: 18.75px;
+    font-size: 16px;
+    padding: 10px;
+    
+}
 /************ Header *************/
+
 
 header {
     display: flex;
-    flex-direction: row;
-    width: 375px;
-    justify-content: space-between;
-    &-fleche {
-        justify-content: start;
-        align-items: center;
-        padding: 23px;
-        i {
-    
-        }
-    }
+    align-items: center;
+    justify-content: center;
+
+}
+.header-container-fleche {
+    margin: 0px;
+    width: 17.2px;
+    height : 16px;
+    top: 20px;
+    left: 20px;
+    display:none;
+    padding: 23px;
+}
+.header-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+    padding-bottom: 5px;       
     &-logo {
-        img {       
+        &-img {       
         max-width:162px;
         height: auto;
         }
@@ -74,40 +124,136 @@ header {
 
 
 /************ Footer *************/
+Footer {
+    background-color: $gris-fonce-color;
+    padding: 22px 25px;
+}
 
-
+.footer-img {
+    max-width: 137px;
+    height: auto;
+    filter: invert(100%);
+}
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 13px;
+    &-content{
+        padding: 3.5px 0px;
+        i {
+            margin-right: 10px;
+            filter: invert(100%);
+            width: 12px;
+            height: 13px;
+        }
+        .fa-handshake {
+            transform: rotate(-30deg);
+        }
+    
+    }
+    a {
+        color: white;
+    }
+}
+ 
 
 /**************************** Acceuil  ***********************/
 
 /************ Location *************/
 .location {
-    background: #EAEAEA;
+    box-shadow: inset 0px 5px 7px 0px  rgba(0,0,0,0.25);
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding: 15.5px 0px;
     &-container {
-        padding: 20px;
         display: flex;
         flex-direction: row;
         &-icon {
             width: 12px;
             height: 16px;
+            margin-bottom: 3px;               
         }
-        &-place {
-        }
+        input {
+            margin-left: 17px;
+            color: black;
+        }   
     }
 }
 /************ Reservation *************/
+.reservation {
+    padding: 39px 30px;
+    background-color: $gris-clair-color;
+    &-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5px 10px;
+        text-align: center;
+        h1 {
+        margin: 0px 20px;
+        }
+        &-content {
+            margin: 0px ;
+        }
+        &-button {
+            margin: 27px 0px 18px 0px;
+             h2 {
+            @include bouton-gradiant();
+             }
+        }
+    }
+}
+/** Fonctionnement **/
 
-/************ Fonctionnement *************/
+.fonctionnement {
+    padding: 48px 20px;
+    display: flex;
+    flex-direction: column;
+    &-container {
+        margin-bottom: 20px;
+        
+    }
+}
+.fonctionnement-rectangle {
+    @include fonctionnement-card();
+    &-bulle {
+        position: absolute;
+        top: 19px;
+        left: -12px;
+        right: 0;
+        bottom: 0;
+       &-cercle {
+        width:24px;
+        height:24px;
+        background:$violet-color;
+        border-radius:50% ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-/************ Restaurants *************/
-
-/**************************** Page Restaurant  ***********************/
-
-/************ Entete *************/
-
-
-
-/************ Menu *************/
+        &-numero {
+            color:white;
+            font-size: 15px;
+            line-height: 16.62px;
+            font-weight: 500;
+        }
+       }
+    }
+    &-content {
+        @include fonctionnement-content();
+        &-icon {
+            width: 15px;
+            height: 15px;
+            margin-right: 23px;
+        }
+    }
+}
+/** Restaurants **/
+/** Page Restaurant  **/
+/** Entete **/
+/** Menu **/
