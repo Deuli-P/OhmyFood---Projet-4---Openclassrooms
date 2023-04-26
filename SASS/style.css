@@ -39,6 +39,10 @@ p {
   color: #353535;
 }
 
+.fa-light {
+  color: #101010;
+}
+
 a {
   text-decoration: none;
 }
@@ -48,7 +52,9 @@ input {
   font-weight: 500;
   line-height: 18.75px;
   font-size: 16px;
-  padding: 10px;
+  padding: 0px;
+  text-align: center;
+  width: 120px;
 }
 
 /************ Header *************/
@@ -135,7 +141,7 @@ Footer {
   margin-bottom: 3px;
 }
 .location-container input {
-  margin-left: 17px;
+  margin-left: 8px;
   color: black;
 }
 
@@ -182,6 +188,7 @@ Footer {
 }
 
 .fonctionnement-rectangle {
+  margin-left: 12px;
   background-color: #f7f7f7;
   border-radius: 20px;
   padding: 20px 0px;
@@ -190,6 +197,7 @@ Footer {
   align-items: center;
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
   margin-top: 25px;
+  margin-bottom: 30px;
 }
 .fonctionnement-rectangle-bulle {
   position: absolute;
@@ -207,7 +215,7 @@ Footer {
   justify-content: center;
   align-items: center;
 }
-.fonctionnement-rectangle-bulle-cercle-numero {
+.fonctionnement-rectangle-bulle-numero {
   color: white;
   font-size: 15px;
   line-height: 16.62px;
@@ -225,6 +233,50 @@ Footer {
 }
 
 /** Restaurants **/
+.restaurants-list {
+  background: #F6F6F6;
+  padding: 54px 0px 40px 0px;
+}
+.restaurants-list-cards-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.restaurants-list-title {
+  margin-left: 20px;
+}
+
+.restaurant-list-card {
+  display: flex;
+  width: 340px;
+  height: auto;
+  margin: 20px 0px 15px 0px;
+  flex-direction: column;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+}
+.restaurant-list-card img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 340px;
+  height: 200px;
+  border-radius: 15px 15px 0px 0px;
+}
+.restaurant-list-card-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 13px;
+}
+.restaurant-list-card-content-text h3 {
+  font-weight: 700;
+}
+.restaurant-list-card-content i {
+  width: 22px;
+  height: 22px;
+  margin-right: 13px;
+}
+
 /** Page Restaurant  **/
 /** Entete **/
 /** Menu **/

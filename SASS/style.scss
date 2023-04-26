@@ -34,11 +34,44 @@ $linear-gradiant: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
     align-items: center;
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
     margin-top: 25px;
+    margin-bottom: 30px;
 }
 @mixin fonctionnement-content {
     display: flex;
     justify-content: flex-start;
     margin-left:35px;
+}
+
+@mixin restaurant-card-accueil {
+    display: flex;
+    width: 340px;
+    height: auto;
+    margin: 20px 0px 15px 0px ;
+    flex-direction: column;
+    box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 15px ;
+    img {
+        object-fit: cover;
+        width: 340px;
+        height: 200px;
+        border-radius: 15px 15px 0px 0px;
+    }
+    &-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 13px;
+        &-text {
+            h3 {
+                font-weight: 700;
+            }
+        }
+        i {
+            width: 22px;
+            height: 22px;
+            margin-right: 13px;
+        }
+    }
 }
 body {
     display: flex;
@@ -76,6 +109,10 @@ p {
     color:#353535
 }
 
+.fa-light {
+    color : #101010 ;
+}
+
 a {
     text-decoration: none;
 }
@@ -85,7 +122,9 @@ input {
     font-weight: 500;
     line-height: 18.75px;
     font-size: 16px;
-    padding: 10px;
+    padding: 0px;
+    text-align: center;
+    width: 120px;
     
 }
 /************ Header *************/
@@ -178,7 +217,7 @@ Footer {
             margin-bottom: 3px;               
         }
         input {
-            margin-left: 17px;
+            margin-left: 8px;
             color: black;
         }   
     }
@@ -220,6 +259,7 @@ Footer {
     }
 }
 .fonctionnement-rectangle {
+    margin-left: 12px;
     @include fonctionnement-card();
     &-bulle {
         position: absolute;
@@ -235,14 +275,13 @@ Footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
+       }
         &-numero {
             color:white;
             font-size: 15px;
             line-height: 16.62px;
             font-weight: 500;
         }
-       }
     }
     &-content {
         @include fonctionnement-content();
@@ -254,6 +293,23 @@ Footer {
     }
 }
 /** Restaurants **/
+.restaurants-list {
+    background: $gris-clair-color;
+    padding: 54px 0px 40px 0px;
+    &-cards-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &-title {
+        margin-left: 20px;
+    }
+}
+.restaurant-list-card {
+        @include restaurant-card-accueil()
+}
+
+
 /** Page Restaurant  **/
 /** Entete **/
 /** Menu **/
