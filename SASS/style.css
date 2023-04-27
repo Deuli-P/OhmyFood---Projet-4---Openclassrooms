@@ -29,6 +29,13 @@ h3 {
   font-size: 18px;
 }
 
+h4 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16.41px;
+  text-align: center;
+}
+
 p {
   font-size: 17px;
   font-weight: 300;
@@ -166,6 +173,8 @@ Footer {
 }
 .reservation-container-button {
   margin: 27px 0px 18px 0px;
+  opacity: 1;
+  transition: opacity 4s ease-in-out;
 }
 .reservation-container-button h2 {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -173,8 +182,8 @@ Footer {
   padding: 13px 18.75px;
   color: white;
 }
-.reservation-container-button h2 :hover {
-  background-color: #353535;
+.reservation-container-button :hover {
+  opacity: 0.85;
 }
 
 /** Fonctionnement **/
@@ -253,9 +262,23 @@ Footer {
   margin: 20px 0px 15px 0px;
   flex-direction: column;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 15px;
+  border-radius: 2px;
+  position: relative;
+  cursor: pointer;
+}
+.restaurant-list-card h4 {
+  top: 15px;
+  right: 15px;
+  background: #99E2D0;
+  padding: 6px 9px;
+  color: #008766;
+  border-radius: 2px;
+  z-index: 2;
+  position: absolute;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .restaurant-list-card img {
+  z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
   width: 340px;
@@ -277,7 +300,6 @@ Footer {
   height: 22px;
   margin-right: 13px;
 }
-
 /** Page Restaurant  **/
 /** Entete **/
 /** Menu **/
