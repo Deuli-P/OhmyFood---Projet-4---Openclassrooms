@@ -42,12 +42,23 @@ p {
   line-height: 20px;
 }
 
+span {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 20px;
+}
+
 .fa-solid {
   color: #353535;
+  font-size: 22px;
 }
 
 .fa-light {
   color: #101010;
+}
+
+.fa-location-dot {
+  cursor: pointer;
 }
 
 a {
@@ -64,6 +75,20 @@ input {
   width: 120px;
 }
 
+@keyframes fade-heart {
+  0% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  95% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /************ Header *************/
 header {
   display: flex;
@@ -147,6 +172,9 @@ Footer {
   height: 16px;
   margin-bottom: 3px;
 }
+.location-container-icon i:hover {
+  color: #101010;
+}
 .location-container input {
   margin-left: 8px;
   color: black;
@@ -174,7 +202,7 @@ Footer {
 .reservation-container-button {
   margin: 27px 0px 18px 0px;
   opacity: 1;
-  transition: opacity 4s ease-in-out;
+  transition: all 0.5s ease;
 }
 .reservation-container-button h2 {
   background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
@@ -182,7 +210,7 @@ Footer {
   padding: 13px 18.75px;
   color: white;
 }
-.reservation-container-button :hover {
+.reservation-container-button:hover {
   opacity: 0.85;
 }
 
@@ -262,9 +290,12 @@ Footer {
   margin: 20px 0px 15px 0px;
   flex-direction: column;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-  border-radius: 2px;
+  border-radius: 20px;
   position: relative;
   cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease;
+  transition: all 1s;
 }
 .restaurant-list-card h4 {
   top: 15px;
@@ -300,6 +331,39 @@ Footer {
   height: 22px;
   margin-right: 13px;
 }
+.restaurant-list-card:hover {
+  opacity: 0.85;
+}
+.restaurant-list-card:hover {
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.4);
+}
+
+.heart {
+  width: 40px;
+  height: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0;
+  position: relative;
+  z-index: 1;
+  overflow: clip;
+  transition: all 0.5s;
+  opacity: 1;
+  font-size: 22px;
+  -webkit-text-stroke: 1px black;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart:hover {
+  -webkit-text-stroke: transparent;
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  -webkit-background-clip: text;
+  animation: fade-heart 2s ease-in;
+}
+
 /** Page Restaurant  **/
 /** Entete **/
 /** Menu **/
