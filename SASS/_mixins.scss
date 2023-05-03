@@ -1,0 +1,113 @@
+@mixin bouton-gradiant {
+    background: $linear-gradiant;
+    border-radius: 25px;
+    padding: 13px 18.75px;
+    color: white;
+}
+
+@mixin fonctionnement-card {
+    background-color: #f7f7f7;
+    border-radius: 20px;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+@mixin fonctionnement-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-left:35px;
+}
+
+@mixin restaurant-card-accueil {
+    display: flex;
+    width: 340px;
+    height: auto;
+    margin: 20px 0px 15px 0px ;
+    flex-direction: column;
+    box-shadow:0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px ;
+    position: relative;
+    cursor:pointer;
+    h4 {
+        top: 15px;
+        right: 15px;
+        background: $vert-clair-color;
+        padding: 6px 9px;
+        color: $vert-fonce-color;
+        border-radius: 2px;
+        z-index: 2;
+        position: absolute;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+    }
+    img {
+        z-index: 1;
+        object-fit: cover;
+        width: 340px;
+        height: 200px;
+        border-radius: 15px 15px 0px 0px;
+    }
+    &-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 10px 13px;
+        &-text {
+            h3 {
+                font-weight: 700;
+            }
+        }
+        i {
+            width: 22px;
+            height: 22px;
+            margin-right: 13px;           
+        }
+    }
+}
+
+@mixin opacity {
+    opacity: 1;
+    transition: all 0.5s ease;
+    &:hover {
+        opacity: 0.85;
+    }
+}
+
+@mixin padding-desktop {
+    padding: 0px 180px;
+}
+
+@mixin menu-card {
+    width: 349px;
+    height: 69px;
+    border: none;
+    box-shadow: 0px 4px 15px $gris-fonce-color;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    &-content {
+        padding: 12px 16px;
+        h2 {
+            font-size: 18px;
+            line-height: 21.09px;
+        }
+        p {
+            font-size: 15px;
+            line-height: 17.63px;
+            padding-top: 5px ;
+        }
+    }
+    &-prix {
+        position: absolute;
+        bottom: 13px;
+        right: 13px;
+        line-height: bold;
+        font-weight: 700;
+    }
+}

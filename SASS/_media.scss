@@ -1,0 +1,96 @@
+// Desktop Screen 
+
+
+@media screen and (min-width:1024px){
+    /**BASE **/
+    body {
+        width: 100%;
+    }
+
+
+    /**HEADER **/
+
+
+
+    /**FOOTER **/
+    Footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: flex-end;
+        height: 114px;
+        width: 1440px;
+    }
+
+    .footer-img {
+        margin-left: 70px;
+    }
+
+    .footer-container{
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: start;
+        a {margin-left: 10px;
+            text-align: center;
+        }
+        &-content {
+            display: flex;
+            margin-right: 10px;
+            
+        }
+    }
+
+    /******** ACCUEIL ***/
+
+    /**** LOCATION ***/
+
+
+    // RESERVATION
+    .reservation {
+        padding: 0px 0px 20px 0px;
+        &-container {
+            margin: 0px 180px;
+            padding: 0px;
+            &-content { margin-top: 18px;}
+            &-button { margin: 18px 0px 0px 0px;}
+        }
+    }
+
+    /*** FONCTIONNEMENT ***/
+    .fonctionnement {
+        &-title {
+            display: block;
+        }
+        &-container{
+            align-items: center;
+            justify-content: center;
+            &-rectangle{
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+    }
+
+    /*** LIST-RESTAURANT ****/
+    .restaurants-list {
+        flex
+        &-content-div {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+
+    /******** RESTAURANTS *******/
+
+    /*** ENTETE *****/
+
+
+
+    /****** MENU  *****/
+
+
+
+
+}

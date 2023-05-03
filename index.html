@@ -2,18 +2,16 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <title>Oh My Food</title>
-    <link rel="stylesheet" href="./SASS/style.css">
+    <link rel="stylesheet" href="./CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
-        <div class="header-container-fleche">
-            <i class="fa-solid fa-arrow-left"></i>
-        </div>
+
         <div class="header-container">          
             <div class="header-container-logo">
                 <img src="./images/logo/ohmyfood.png" alt="Logo Oh My Food" class="header-container-logo-img">
@@ -51,57 +49,59 @@
                 <div class="fontionnement-title">
                     <h1>Fonctionnement</h1>
                 </div>
-                <article class="fonctionnement-rectangle">
-                    <div class="fonctionnement-rectangle-bulle">
-                        <div class="fonctionnement-rectangle-bulle-cercle">
-                            <div class="fonctionnement-rectangle-bulle-cercle-numero">
-                                <p>1</p>
+                <div class="fonctionnement-container-rectangle">
+                    <article class="fonctionnement-rectangle">
+                        <div class="fonctionnement-rectangle-bulle">
+                            <div class="fonctionnement-rectangle-bulle-cercle">
+                                <div class="fonctionnement-rectangle-bulle-cercle-numero">
+                                    <p>1</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="fonctionnement-rectangle-content">
-                        <div class="fonctionnement-rectangle-content-icon">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
-                        </div>
-                        <div class="fonctionnement-rectangle-content-text">
-                            <h2>Choisissez un restaurant</h2>
-                        </div>
-                    </div>                    
-                </article>
-                <article class="fonctionnement-rectangle">
-                    <div class="fonctionnement-rectangle-bulle">
-                        <div class="fonctionnement-rectangle-bulle-cercle">
-                            <div class="fonctionnement-rectangle-bulle-cercle-numero">
-                                <p>2</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="fonctionnement-rectangle-content">
-                        <div class="fonctionnement-rectangle-content-icon">
-                                <i class="fa-solid fa-list-ul"></i>
+                        <div class="fonctionnement-rectangle-content">
+                            <div class="fonctionnement-rectangle-content-icon">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
                             </div>
                             <div class="fonctionnement-rectangle-content-text">
-                                <h2>Composez votre menu</h2>
+                                <h2>Choisissez un restaurant</h2>
                             </div>
-                    </div> 
-                </article>
-                <article class="fonctionnement-rectangle">
-                    <div class="fonctionnement-rectangle-bulle">
-                        <div class="fonctionnement-rectangle-bulle-cercle">
-                            <div class="fonctionnement-rectangle-bulle-cercle-numero">
-                                <p>3</p>
+                        </div>                    
+                    </article>
+                    <article class="fonctionnement-rectangle">
+                        <div class="fonctionnement-rectangle-bulle">
+                            <div class="fonctionnement-rectangle-bulle-cercle">
+                                <div class="fonctionnement-rectangle-bulle-cercle-numero">
+                                    <p>2</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="fonctionnement-rectangle-content">
-                        <div class="fonctionnement-rectangle-content-icon">
-                            <i class="fa-solid fa-store"></i>
+                        <div class="fonctionnement-rectangle-content">
+                            <div class="fonctionnement-rectangle-content-icon">
+                                    <i class="fa-solid fa-list-ul"></i>
+                                </div>
+                                <div class="fonctionnement-rectangle-content-text">
+                                    <h2>Composez votre menu</h2>
+                                </div>
+                        </div> 
+                    </article>
+                    <article class="fonctionnement-rectangle">
+                        <div class="fonctionnement-rectangle-bulle">
+                            <div class="fonctionnement-rectangle-bulle-cercle">
+                                <div class="fonctionnement-rectangle-bulle-cercle-numero">
+                                    <p>3</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="fonctionnement-rectangle-content-text">
-                            <h2>Dégustez au restaurant</h2>
+                        <div class="fonctionnement-rectangle-content">
+                            <div class="fonctionnement-rectangle-content-icon">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <div class="fonctionnement-rectangle-content-text">
+                                <h2>Dégustez au restaurant</h2>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
         </section>
         <section class="restaurants-list">
@@ -170,15 +170,15 @@
         <img class="footer-img" src="images/logo/ohmyfood.png" alt="Logo Oh MY Food">
         <div class="footer-container">
             <div class="footer-container-content">
-                    <i class="fa-solid fa-utensils"></i>
-                    <a href="#"> Proposer un restaurant</a>
-                </div>
-                <div class="footer-container-content">
-                    <i class="fa-solid fa-handshake"></i>
-                    <a href="#">Devenir partenaire</a>
-                </div>
-                <a href="#"> Mentions légales</a>
-                <a href="#">Contact</a>
+                <i class="fa-solid fa-utensils"></i>
+                <a href="#"> Proposer un restaurant</a>
+            </div>
+            <div class="footer-container-content">
+                <i class="fa-solid fa-handshake"></i>
+                <a href="#">Devenir partenaire</a>
+            </div>
+            <a href="#"> Mentions légales</a>
+            <a href="#">Contact</a>
         </div>
     </footer>
 </body>
