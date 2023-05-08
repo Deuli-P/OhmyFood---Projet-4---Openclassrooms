@@ -1,72 +1,3 @@
-@media screen and (min-width: 1024px) {
-  /**BASE **/
-  body {
-    width: 100%;
-  }
-  /**HEADER **/
-  /**FOOTER **/
-  Footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: flex-end;
-    height: 114px;
-    width: 1440px;
-  }
-  .footer-img {
-    margin-left: 70px;
-  }
-  .footer-container {
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: start;
-  }
-  .footer-container a {
-    margin-left: 10px;
-    text-align: center;
-  }
-  .footer-container-content {
-    display: flex;
-    margin-right: 10px;
-  }
-  /******** ACCUEIL ***/
-  /**** LOCATION ***/
-  .reservation {
-    padding: 0px 0px 20px 0px;
-  }
-  .reservation-container {
-    margin: 0px 180px;
-    padding: 0px;
-  }
-  .reservation-container-content {
-    margin-top: 18px;
-  }
-  .reservation-container-button {
-    margin: 18px 0px 0px 0px;
-  }
-  /*** FONCTIONNEMENT ***/
-  .fonctionnement-title {
-    display: block;
-  }
-  .fonctionnement-container {
-    align-items: center;
-    justify-content: center;
-  }
-  .fonctionnement-container-rectangle {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  /*** LIST-RESTAURANT ****/
-  flex .restaurants-list-content-div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  /******** RESTAURANTS *******/
-  /*** ENTETE *****/
-  /****** MENU  *****/
-}
 * {
   margin: 0px;
   padding: 0px;
@@ -165,15 +96,23 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .header-container-fleche {
   margin: 0px;
   width: 17.2px;
   height: 16px;
-  top: 20px;
+  top: 19px;
   left: 20px;
-  padding: 23px;
+  position: absolute;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.2s ease-in-out;
+}
+.header-container-fleche:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
 }
 
 .header-container {
@@ -458,9 +397,10 @@ Footer {
   z-index: -1;
 }
 .photo-container-content img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 275px;
+  width: 375px;
 }
 
 /** Menu **/
@@ -468,6 +408,9 @@ Footer {
   border-radius: 20px 20px 0px 0px;
   background: white;
   padding: 17px 13px;
+  width: auto;
+  position: relative;
+  top: -40px;
 }
 .menu-container-entete {
   padding-top: 15px;
@@ -479,13 +422,13 @@ Footer {
   font-family: "Shrikhand", cursive;
 }
 .menu-container-entete-coeur {
-  width: 22px;
-  height: 22px;
-  padding-right: 13px;
+  width: 23px;
+  height: 23px;
+  padding-right: 40px;
 }
 
 .menu-part {
-  padding: 40px 0px;
+  padding: 40px 0px 0px;
 }
 .menu-part-title h3 {
   text-transform: uppercase;
@@ -499,37 +442,192 @@ Footer {
   border-radius: 2px;
 }
 
-.menu-part-container {
-  margin-top: 12px;
-}
-
 .menu-part-card {
+  margin-top: 12px;
   width: 349px;
   height: 69px;
   border: none;
-  box-shadow: 0px 4px 15px #353535;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   position: relative;
+  overflow: hidden;
 }
 .menu-part-card-content {
-  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 12PX 0px;
+  width: auto;
+  transition: all 0.8s ease;
 }
 .menu-part-card-content h2 {
   font-size: 18px;
   line-height: 21.09px;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 16px;
+  box-sizing: border-box;
 }
 .menu-part-card-content p {
   font-size: 15px;
   line-height: 17.63px;
-  padding-top: 5px;
+  padding-left: 16px;
+  margin-top: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding-left: 16px;
+  box-sizing: border-box;
 }
-.menu-part-card-prix {
+.menu-part-card-slide {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
   position: absolute;
-  bottom: 13px;
-  right: 13px;
+  top: -1;
+  right: 0;
+  transform: translate(72px);
+  transition: all 0.8s ease;
+}
+.menu-part-card-slide-prix {
+  padding: 0px 12px;
+  margin-top: 34%;
+  white-space: nowrap;
+  background-color: white;
+  box-sizing: border-box;
+}
+.menu-part-card-slide-prix p, .menu-part-card-slide-prix span {
   line-height: bold;
   font-weight: 700;
+}
+.menu-part-card-slide-valid {
+  background-color: aquamarine;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 0px 20px;
+}
+.menu-part-card-slide .fa-check {
+  color: aqua;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+  margin-top: 20px;
+  transform: rotate(90deg);
+  transition: all 0.8s ease-out 0.3s;
+}
+.menu-part-card:active .menu-part-card-slide {
+  transform: translateX(0px);
+}
+.menu-part-card:active .menu-part-card-slide-valid .fa-check {
+  transform: rotate(0deg);
+}
+.menu-part-card:active .menu-part-card-content {
+  width: 231px;
+}
+
+.menu-button-purple {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.menu-button-purple-a {
+  background: linear-gradient(193.33deg, #9356DC -11.44%, #FF79DA 123.93%);
+  border-radius: 25px;
+  padding: 13px 18.75px;
+  color: white;
+  padding: 15px 50px;
+}
+.menu-button-purple-a h2 {
+  font-weight: 500;
+}
+
+@media screen and (min-width: 1024px) {
+  /**BASE **/
+  body {
+    width: 100%;
+  }
+  /**HEADER **/
+  /**FOOTER **/
+  Footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 114px;
+    width: 1440px;
+  }
+  .footer-img {
+    margin-left: 70px;
+  }
+  .footer-container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .footer-container a {
+    margin-left: 10px;
+    text-align: center;
+  }
+  .footer-container-content {
+    display: flex;
+    margin-right: 10px;
+  }
+  /******** ACCUEIL ***/
+  /**** LOCATION ***/
+  .reservation {
+    padding: 30px 0px;
+  }
+  .reservation-container {
+    margin: 0px 180px;
+    padding: 0px;
+  }
+  .reservation-container-title h1 {
+    font-size: 40px;
+  }
+  .reservation-container-content {
+    margin-top: 18px;
+  }
+  .reservation-container-button {
+    margin: 18px 0px 0px 0px;
+  }
+  /*** FONCTIONNEMENT ***/
+  .fonctionnement {
+    padding-bottom: 20px;
+  }
+  .fonctionnement-title {
+    display: block;
+    float: left;
+  }
+  .fonctionnement-container {
+    margin-left: 180px;
+  }
+  .fonctionnement-container-rectangle {
+    flex-direction: row;
+    align-items: center;
+  }
+  .fonctionnement-rectangle {
+    margin-right: 36px;
+  }
+  /*** LIST-RESTAURANT ****/
+  .restaurants-list-title {
+    margin-left: 180px;
+  }
+  .restaurants-list-cards-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 180px;
+  }
+  .restaurant-list-card {
+    margin-right: 45px;
+  }
+  /******** RESTAURANTS *******/
+  /*** ENTETE *****/
+  /****** MENU  *****/
 }

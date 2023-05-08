@@ -2,7 +2,6 @@
 
 @import '_variables';
 @import '_mixins';
-@import '_media';
 
 // BASE
 * {
@@ -95,16 +94,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-
+    position: relative;
 }
 .header-container-fleche {
     margin: 0px;
     width: 17.2px;
     height : 16px;
-    top: 20px;
+    top: 19px;
     left: 20px;
-    padding: 23px;
-    
+    position: absolute;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
 }
 .header-container {
     width: 100%;
@@ -311,16 +316,20 @@ Footer {
 .photo-container {
     width: 100%;
         &-content img{
-            object-fit: contain;
+            object-fit: cover;
             height: 275px;
+            width: 375px;
         }
-z-index: -1;
+    z-index: -1;
 }
 /** Menu **/
 .menu-container {
     border-radius: 20px 20px 0px 0px;
     background: white;
     padding: 17px 13px ;
+    width: auto;
+    position: relative;
+    top: -40px;
     &-entete {
         padding-top:15px ;
         display: flex;
@@ -330,14 +339,14 @@ z-index: -1;
             font-family: 'Shrikhand', cursive;
         }
         &-coeur{
-            width: 22px; 
-            height: 22px;
-            padding-right: 13px
+            width: 23px; 
+            height: 23px;
+            padding-right: 40px;
               }
     }
 }
 .menu-part {
-    padding: 40px 0px;
+    padding: 40px 0px 0px;
     &-title {
         h3 {
             text-transform: uppercase; 
@@ -352,9 +361,25 @@ z-index: -1;
         }
     }
 }
-.menu-part-container {
-    margin-top: 12px;
-}
 .menu-part-card {
+    margin-top: 12px;
     @include menu-card;
 }
+
+.menu-button-purple {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    &-a {
+        @include bouton-gradiant();
+        padding: 15px 50px;
+        h2{
+        font-weight:500;
+
+
+        }
+    }
+
+}
+
+@import '_media';
