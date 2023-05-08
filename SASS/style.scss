@@ -9,10 +9,10 @@
     padding: 0px;
     font-family: Roboto, sans-serif;
 }
-
 body {
     list-style: none;
 }
+
 
 h1 {
     font-weight: 700;
@@ -52,6 +52,9 @@ span{
     line-height: 20px;
 }
 
+a { text-decoration: none;}
+a:visited { text-decoration: none;}
+
 .fa-solid {
     color:#353535;
     font-size:22px;
@@ -60,8 +63,6 @@ span{
 .fa-light { color : #101010 ;}
 
 .fa-location-dot{ cursor: pointer;}
-
-a { text-decoration: none;}
 
 input {
     border: none;
@@ -130,7 +131,7 @@ header {
 Footer {
     background-color: $gris-fonce-color;
     padding: 22px 25px;
-
+    a:visited {color: white;}
 }
 
 .footer-img {
@@ -147,25 +148,18 @@ Footer {
         margin: 3.5px 0px;
         display: flex;
         align-items: center;
-        position: relative;
         i {
-            margin-right: 20px;
             filter: invert(100%);
-            width: 12px;
-            height: 12px;
-            position: absolute;
-            top: 0px;
-            margin-right: 10px;
-        }
-        a {
-            position: relative;
-            left: 30px;
-            top: 0;
+            font-size: 15px;
+            width: 20px;
         }
         .fa-handshake {transform: rotate(-30deg);}
+        a {
+            margin-left: 5px;
     }
-    a { 
-        color: white;
+    &-a { 
+            padding-top: 5px;
+        }
     }
 }
  
@@ -312,6 +306,10 @@ Footer {
 
 
 /** Page Restaurant  **/
+
+.main-restaurant-page {
+    height: 1360px;
+}
 /** Entete **/
 .photo-container {
     width: 100%;
@@ -325,8 +323,8 @@ Footer {
 /** Menu **/
 .menu-container {
     border-radius: 20px 20px 0px 0px;
-    background: white;
-    padding: 17px 13px ;
+    background: $gris-clair-color;
+    padding: 17px 13px 1px;
     width: auto;
     position: relative;
     top: -40px;
@@ -369,14 +367,12 @@ Footer {
 .menu-button-purple {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin: 40px 0px;
     &-a {
         @include bouton-gradiant();
         padding: 15px 50px;
         h2{
         font-weight:500;
-
-
         }
     }
 

@@ -85,6 +85,7 @@
     width: 349px;
     height: 69px;
     border: none;
+    background-color: white;
     box-shadow: 0px 4px 15px rgba($color: #000000, $alpha: 0.1);
     border-radius: 15px;
     display: flex;
@@ -128,7 +129,7 @@
         position: absolute;
         top: -1;
         right:0;
-        transform: translate(72px);
+        transform: translate(65px);
         transition: all 0.8s ease;
         &-prix {
             p, span{
@@ -142,18 +143,19 @@
             box-sizing: border-box;
         }
         &-valid {
-            background-color: aquamarine;
+            background-color: $vert-clair-color;
             width: 100%;
-             height: 100%;
+            height: 100%;
             text-align: center;
             padding: 0px 20px;  
         }
         .fa-check {
-            color: aqua;
+            font-size: 15px;
+            color: $vert-clair-color;
             border-radius: 50%;
             background-color: white;
             padding: 5px;
-            margin-top: 20px;
+            margin-top: 24px;
             transform: rotate(90deg);
             transition: all 0.8s ease-out 0.3s;
           }
