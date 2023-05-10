@@ -18,8 +18,28 @@ H1 {
     padding: 20px;
 }
 body {
+    width: 100%;
     background-color: coral;
 }
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background:#fff;
+    align-items: center;
+    animation: loader-opacity 0.4s ease-in 3s forwards;
+}
+
+@keyframes loader-opacity { 
+    from {opacity: 1;}
+    to { opacity: 0;}
+    
+}
+
 .container {
     width: 100%;
     height:1000px;
@@ -27,6 +47,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translateY(-1000px);
+    animation: container-translate 1.5s 3.4s ease-out forwards;
 }
 .box-container {
     margin: 50px;
@@ -43,4 +65,38 @@ body {
     color: azure;
     background-color: darkseagreen;
     border-radius: 10px;
+}
+
+@keyframes container-translate {
+    from {
+        transform: translateY(-300px);
+    }
+    to {
+        transform: translateY(0px);
+    }        
+}
+
+@keyframes txt-appearance {
+    from { 
+        opacity: 0;
+        transform: translateX(-100);
+    }
+    to { 
+         opacity: 1;
+        transform: translateX(0);}
+}
+
+.box_01 {
+    opacity: 0;
+    animation: txt-appearance 1s 3.6s forwards;
+}
+.box_02 {
+    opacity: 0;
+    transform:translateX(-100px) ;
+    animation: txt-appearance 1s 4s forwards;
+}
+.box_03 {
+    opacity: 0;
+    transform:translateX(-100px) ;
+    animation: txt-appearance 1s 4.3s forwards;
 }

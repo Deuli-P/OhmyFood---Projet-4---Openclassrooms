@@ -75,6 +75,22 @@ input {
 
 }
 
+@keyframes fade-in-menu-part {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes loader-opacity { 
+    from {opacity: 1;}
+    to { opacity: 0;}
+} 
+
 @keyframes fade-heart {
     0%{
         transform: scale(1);
@@ -101,8 +117,8 @@ header {
     margin: 0px;
     width: 17.2px;
     height : 16px;
-    top: 19px;
-    left: 20px;
+    top: 17px;
+    left: 17px;
     position: absolute;
     opacity: 1;
     transform: scale(1);
@@ -162,7 +178,27 @@ Footer {
         }
     }
 }
- 
+/** LOADING PAGE **/
+
+.loading {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 375px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background:#FFFAFC;
+    align-items: center;
+    animation: loader-opacity 0.4s ease-in 3s forwards;
+    img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-size: cover;
+    }
+}
 
 /**************************** Acceuil  ***********************/
 
@@ -225,6 +261,7 @@ Footer {
 .fonctionnement-rectangle {
     margin-left: 12px;
     @include fonctionnement-card();
+    width: 322px;
     &-bulle {
         position: absolute;
         top: 19px;
@@ -248,7 +285,9 @@ Footer {
         }
     }
     &-content {
-        @include fonctionnement-content();
+        display: flex;
+        justify-content: flex-start;
+        margin-left:35px;
         &-icon {
             width: 15px;
             height: 15px;
@@ -264,8 +303,9 @@ Footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
     }
-    &-title { margin-left: 20px;}
+    &-title { margin-left: 5%;}
 
 }
 .restaurant-list-card {
@@ -358,7 +398,27 @@ Footer {
             border-radius: 2px;
         }
     }
+
 }
+.entrees {
+    opacity: 0;
+    transform: translateY(-100px);
+    top: 0px;
+    animation: fade-in-menu-part 1s 3s forwards;
+}
+.plats {
+    opacity: 0;
+    transform: translateY(-100px);
+    top: 0px;
+    animation: fade-in-menu-part 1s 3.3s forwards;
+}
+.desserts {
+    opacity: 0;
+    transform: translateY(-100px);
+    top: 0px;
+    animation: fade-in-menu-part 1s 3.6s forwards;
+}
+
 .menu-part-card {
     margin-top: 12px;
     @include menu-card;

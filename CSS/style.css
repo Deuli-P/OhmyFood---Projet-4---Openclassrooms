@@ -76,6 +76,24 @@ input {
   width: 120px;
 }
 
+@keyframes fade-in-menu-part {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes loader-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 @keyframes fade-heart {
   0% {
     transform: scale(1);
@@ -107,8 +125,8 @@ header {
   margin: 0px;
   width: 17.2px;
   height: 16px;
-  top: 19px;
-  left: 20px;
+  top: 17px;
+  left: 17px;
   position: absolute;
   opacity: 1;
   transform: scale(1);
@@ -170,6 +188,27 @@ Footer a:visited {
 }
 .footer-container-content-a {
   padding-top: 5px;
+}
+
+/** LOADING PAGE **/
+.loading {
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 375px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: #FFFAFC;
+  align-items: center;
+  animation: loader-opacity 0.4s ease-in 3s forwards;
+}
+.loading img {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-size: cover;
 }
 
 /**************************** Acceuil  ***********************/
@@ -259,6 +298,7 @@ Footer a:visited {
   filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.15));
   margin-top: 25px;
   margin-bottom: 30px;
+  width: 322px;
 }
 .fonctionnement-rectangle-bulle {
   position: absolute;
@@ -304,12 +344,12 @@ Footer a:visited {
   align-items: center;
 }
 .restaurants-list-title {
-  margin-left: 20px;
+  margin-left: 5%;
 }
 
 .restaurant-list-card {
   display: flex;
-  width: 340px;
+  width: 90%;
   height: auto;
   margin: 20px 0px 15px 0px;
   flex-direction: column;
@@ -336,7 +376,7 @@ Footer a:visited {
   z-index: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  width: 340px;
+  width: 100%;
   height: 200px;
   border-radius: 15px 15px 0px 0px;
 }
@@ -444,6 +484,27 @@ Footer a:visited {
   height: 3px;
   border-width: 0;
   border-radius: 2px;
+}
+
+.entrees {
+  opacity: 0;
+  transform: translateY(-100px);
+  top: 0px;
+  animation: fade-in-menu-part 1s 3s forwards;
+}
+
+.plats {
+  opacity: 0;
+  transform: translateY(-100px);
+  top: 0px;
+  animation: fade-in-menu-part 1s 3.3s forwards;
+}
+
+.desserts {
+  opacity: 0;
+  transform: translateY(-100px);
+  top: 0px;
+  animation: fade-in-menu-part 1s 3.6s forwards;
 }
 
 .menu-part-card {
@@ -556,7 +617,7 @@ Footer a:visited {
 @media screen and (min-width: 1024px) {
   /**BASE **/
   html {
-    width: 100%;
+    width: 1440px;
   }
   main {
     display: flex;
@@ -566,6 +627,11 @@ Footer a:visited {
   /**HEADER **/
   header {
     width: 100%;
+    padding: 16px 0px 25px;
+  }
+  .header-container-fleche {
+    top: 36px;
+    left: 36px;
   }
   /**FOOTER **/
   Footer {
@@ -580,7 +646,7 @@ Footer a:visited {
   .footer-img {
     padding-top: 6px;
     margin-left: 70px;
-    margin-right: 50px;
+    margin-right: 100px;
     max-width: 100px;
   }
   .footer-container {
@@ -601,10 +667,15 @@ Footer a:visited {
   .footer-container-content a {
     text-decoration: none;
   }
+  /** LOADING PAGE **/
+  .loading {
+    width: 100%;
+  }
   /******** ACCUEIL ***/
   /**** LOCATION ***/
   .reservation {
     padding: 30px 0px;
+    width: 100%;
   }
   .reservation-container {
     margin: 0px 180px;
@@ -621,34 +692,49 @@ Footer a:visited {
   }
   /*** FONCTIONNEMENT ***/
   .fonctionnement {
-    padding-bottom: 20px;
+    padding: 50px 0px;
+    width: 100%;
   }
   .fonctionnement-title {
     display: block;
     float: left;
+    margin-left: 18%;
   }
   .fonctionnement-container {
-    margin-left: 180px;
+    margin: 0px 18%;
   }
   .fonctionnement-container-rectangle {
     flex-direction: row;
     align-items: center;
   }
   .fonctionnement-rectangle {
-    margin-right: 36px;
+    width: 30%;
+    margin: 25px 12px 2px;
   }
   /*** LIST-RESTAURANT ****/
+  .restaurants-list {
+    width: 100%;
+    padding: 5px 0px 25px;
+    display: flex;
+    flex-direction: column;
+  }
   .restaurants-list-title {
-    margin-left: 180px;
+    margin: 25px 17%;
   }
   .restaurants-list-cards-div {
+    margin: 0px 15% 53px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: 180px;
+    justify-content: center;
+    align-items: center;
   }
   .restaurant-list-card {
-    margin-right: 45px;
+    width: 45%;
+    margin: 25px 1.9%;
+  }
+  .restaurant-list-card img {
+    width: 100%;
   }
   /******** RESTAURANTS *******/
   .main-restaurant-page {
