@@ -574,7 +574,7 @@ Footer a:visited {
   flex-direction: row;
   height: 100%;
   position: absolute;
-  top: -1;
+  top: 0;
   right: 0;
   transform: translate(65px);
   transition: all 0.8s ease;
@@ -587,7 +587,6 @@ Footer a:visited {
   box-sizing: border-box;
 }
 .menu-part-card-slide-prix p, .menu-part-card-slide-prix span {
-  line-height: bold;
   font-weight: 700;
 }
 .menu-part-card-slide-valid {
