@@ -5,17 +5,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="initial-scale=1.0">
         <link rel="stylesheet" href="../CSS/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
         </head>
     <body> 
+        <div class="loading">
+            <img src="../images/loader.gif" alt="une animation de poelle avec un cercle de chargement">
+
+        </div>
         <header>
             <div class="header-container-fleche">
-                <i class="fa-solid fa-arrow-left"></i>
+                <a href="../index.html"><i class="fa-solid fa-arrow-left"></i></a>
             </div>
             <div class="header-container">          
                 <div class="header-container-logo">
@@ -39,7 +43,7 @@
                     </div>
                 </div>
                 <div class="menu-container-list">
-                    <article class="menu-part">
+                    <article class="menu-part entrees">
                         <div class="menu-part-title">
                             <h3>Entrées</h3>
                             <hr>
@@ -47,8 +51,8 @@
                         <div class="menu-part-container">
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Fricassée d'escargots</h2>
-                                    <p>Au piment d'Espelette</p>
+                                    <h2>Tartare de thon</h2>
+                                    <p>Assaisonné au yuzu</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -63,8 +67,8 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Foie gras de canard mi-cuit</h2>
-                                    <p>Et ses copeaux de truffe noire</p>
+                                    <h2>Bouchée de homard croustillant</h2>
+                                    <p>Et sa farandole de petits légumes</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -79,8 +83,8 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Œuf au plat</h2>
-                                    <p>Assaisonné à la truffe sur lit de caviar</p>
+                                    <h2>Velouté de cèpes </h2>
+                                    <p>Aux truffes</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -95,7 +99,7 @@
                             </article>
                         </div>
                     </article>
-                    <article class="menu-part">
+                    <article class="menu-part plats">
                         <div class="menu-part-title">
                             <h3>Plats</h3>
                             <hr>
@@ -103,8 +107,8 @@
                         <div class="menu-part-container">
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Filet de bœuf aux herbes</h2>
-                                    <p>Accompagné de sa ribambelle de légumes</p>
+                                    <h2>Poulet rôti aux herbes de Provence </h2>
+                                    <p>Et sa crème de truffe</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -119,8 +123,8 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Parmentier de queue de bœuf</h2>
-                                    <p>À la truffe noire sur sa purée de panais</p>
+                                    <h2>Langouste rôtie</h2>
+                                    <p>Et ses légumes de saison</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -135,8 +139,8 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Filet de turbot</h2>
-                                    <p>Aux agrumes</p>
+                                    <h2>Côte de bœuf Angus </h2>
+                                    <p>Et sa purée de panais</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -151,7 +155,7 @@
                             </article>
                         </div>
                     </article>
-                    <article class="menu-part">
+                    <article class="menu-part desserts">
                         <div class="menu-part-title">
                             <h3>Desserts</h3>
                             <hr>
@@ -159,8 +163,8 @@
                         <div class="menu-part-container">
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Paris-Brest</h2>
-                                    <p>Revisité</p>
+                                    <h2>Farandole de desserts</h2>
+                                    <p>Du chef</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -175,8 +179,8 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Macaron au chocolat d'exception</h2>
-                                    <p>Et glace à la vanille de Madagascar</p>
+                                    <h2>Crème brulée</h2>
+                                    <p>Revisitée</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
@@ -191,12 +195,12 @@
                             </article>
                             <article class="menu-part-card">
                                 <div class="menu-part-card-content">
-                                    <h2>Mousse au chocolat </h2>
-                                    <p>Au piment d'Espelette et à la truffe noire</p>
+                                    <h2>Tiramisu  </h2>
+                                    <p>À la noisette</p>
                                 </div>
                                 <div class="menu-part-card-slide">
                                     <div class="menu-part-card-slide-prix">
-                                        <p>22 <span>€</span></p>
+                                        <p>23 <span>€</span></p>
                                     </div>
                                     <div class="menu-part-card-slide-valid">
                                         <div class="slide-valid-cercle">

@@ -47,10 +47,12 @@ span {
 
 a {
   text-decoration: none;
+  color: black;
 }
 
 a:visited {
   text-decoration: none;
+  color: black;
 }
 
 .fa-solid {
@@ -92,6 +94,14 @@ input {
   }
   to {
     opacity: 0;
+  }
+}
+@keyframes loader-out {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-20000px);
   }
 }
 @keyframes fade-heart {
@@ -185,9 +195,13 @@ Footer a:visited {
 }
 .footer-container-content a {
   margin-left: 5px;
+  color: white;
 }
 .footer-container-content-a {
   padding-top: 5px;
+}
+.footer-container-content-a a {
+  color: white;
 }
 
 /** LOADING PAGE **/
@@ -202,7 +216,8 @@ Footer a:visited {
   justify-content: center;
   background: #FFFAFC;
   align-items: center;
-  animation: loader-opacity 0.4s ease-in 3s forwards;
+  animation: loader-opacity 0.4s ease-in 2s forwards;
+  animation: loader-out 0.1s ease 2.1s forwards;
 }
 .loading img {
   width: 100%;
@@ -435,6 +450,10 @@ Footer a:visited {
   height: 1360px;
 }
 
+.main-restaurant-page-note {
+  height: 1448px;
+}
+
 /** Entete **/
 .photo-container {
   width: 100%;
@@ -490,21 +509,21 @@ Footer a:visited {
   opacity: 0;
   transform: translateY(-100px);
   top: 0px;
-  animation: fade-in-menu-part 1s 3s forwards;
+  animation: fade-in-menu-part 1s 2.2s forwards;
 }
 
 .plats {
   opacity: 0;
   transform: translateY(-100px);
   top: 0px;
-  animation: fade-in-menu-part 1s 3.3s forwards;
+  animation: fade-in-menu-part 1s 2.4s forwards;
 }
 
 .desserts {
   opacity: 0;
   transform: translateY(-100px);
   top: 0px;
-  animation: fade-in-menu-part 1s 3.6s forwards;
+  animation: fade-in-menu-part 1s 2.6s forwards;
 }
 
 .menu-part-card {
@@ -739,6 +758,9 @@ Footer a:visited {
   /******** RESTAURANTS *******/
   .main-restaurant-page {
     height: 1490px;
+  }
+  .main-restaurant-page-note {
+    height: 1570px;
   }
   /*** ENTETE *****/
   .photo-container {

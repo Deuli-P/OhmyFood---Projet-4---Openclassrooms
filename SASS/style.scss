@@ -52,8 +52,8 @@ span{
     line-height: 20px;
 }
 
-a { text-decoration: none;}
-a:visited { text-decoration: none;}
+a { text-decoration: none; color: black;}
+a:visited { text-decoration: none; color: black;}
 
 .fa-solid {
     color:#353535;
@@ -90,6 +90,11 @@ input {
     from {opacity: 1;}
     to { opacity: 0;}
 } 
+@keyframes loader-out {
+    from { transform: translateY(0px);}
+    to { transform: translateY(-20000px);}
+    
+}
 
 @keyframes fade-heart {
     0%{
@@ -172,9 +177,14 @@ Footer {
         .fa-handshake {transform: rotate(-30deg);}
         a {
             margin-left: 5px;
+            color: white;
     }
     &-a { 
             padding-top: 5px;
+            a {
+            color: white;
+            }
+
         }
     }
 }
@@ -191,14 +201,16 @@ Footer {
     justify-content: center;
     background:#FFFAFC;
     align-items: center;
-    animation: loader-opacity 0.4s ease-in 3s forwards;
+    animation: loader-opacity 0.4s ease-in 2s forwards;
     img {
         width: 100%;
         height: auto;
         text-align: center;
         background-size: cover;
     }
+    animation: loader-out 0.1s ease 2.1s forwards;
 }
+
 
 /**************************** Acceuil  ***********************/
 
@@ -350,6 +362,9 @@ Footer {
 .main-restaurant-page {
     height: 1360px;
 }
+.main-restaurant-page-note {
+    height: 1448px;
+}
 /** Entete **/
 .photo-container {
     width: 100%;
@@ -404,19 +419,19 @@ Footer {
     opacity: 0;
     transform: translateY(-100px);
     top: 0px;
-    animation: fade-in-menu-part 1s 3s forwards;
+    animation: fade-in-menu-part 1s 2.2s forwards;
 }
 .plats {
     opacity: 0;
     transform: translateY(-100px);
     top: 0px;
-    animation: fade-in-menu-part 1s 3.3s forwards;
+    animation: fade-in-menu-part 1s 2.4s forwards;
 }
 .desserts {
     opacity: 0;
     transform: translateY(-100px);
     top: 0px;
-    animation: fade-in-menu-part 1s 3.6s forwards;
+    animation: fade-in-menu-part 1s 2.6s forwards;
 }
 
 .menu-part-card {
