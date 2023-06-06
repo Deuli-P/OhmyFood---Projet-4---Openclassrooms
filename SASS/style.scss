@@ -8,6 +8,7 @@
     margin: 0px;
     padding: 0px;
     font-family: Roboto, sans-serif;
+    box-sizing: border-box;
 }
 body {
     list-style: none;
@@ -52,8 +53,8 @@ span{
     line-height: 20px;
 }
 
-a { text-decoration: none; color: black;}
-a:visited { text-decoration: none; color: black;}
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
 
 .fa-solid {
     color:#353535;
@@ -108,6 +109,29 @@ input {
         transform: scale(1);
         opacity: 1;
     }
+}
+
+/** LOADING PAGE **/
+
+.loading {
+    z-index: 3;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background:#FFFAFC;
+    align-items: center;
+    animation: loader-opacity 0.4s ease-in 2s forwards;
+    img {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        background-size: cover;
+    }
+    animation: loader-out 0.1s ease 2.1s forwards;
 }
 
 /************ Header *************/
@@ -183,33 +207,16 @@ Footer {
             padding-top: 5px;
             a {
             color: white;
+                &:visited {
+                    color: white;
+                }
             }
+
 
         }
     }
 }
-/** LOADING PAGE **/
 
-.loading {
-    z-index: 3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 375px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    background:#FFFAFC;
-    align-items: center;
-    animation: loader-opacity 0.4s ease-in 2s forwards;
-    img {
-        width: 100%;
-        height: auto;
-        text-align: center;
-        background-size: cover;
-    }
-    animation: loader-out 0.1s ease 2.1s forwards;
-}
 
 
 /**************************** Acceuil  ***********************/
@@ -273,7 +280,7 @@ Footer {
 .fonctionnement-rectangle {
     margin-left: 12px;
     @include fonctionnement-card();
-    width: 322px;
+    width: 100%;
     &-bulle {
         position: absolute;
         top: 19px;
@@ -371,7 +378,7 @@ Footer {
         &-content img{
             object-fit: cover;
             height: 275px;
-            width: 375px;
+            width: 100%;
         }
     z-index: -1;
 }
@@ -412,9 +419,11 @@ Footer {
             border-width: 0;
             border-radius: 2px;
         }
+    
     }
-
 }
+
+
 .entrees {
     opacity: 0;
     transform: translateY(-100px);

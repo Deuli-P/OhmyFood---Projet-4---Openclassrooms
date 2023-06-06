@@ -3,13 +3,16 @@
 
 @media screen and (min-width:1024px){
     /**BASE **/
-    html {
-        width: 1440px;
+    body{
+        width: 100%;
     }
     main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    }
+
+    /** LOADING PAGE **/
+    .loading {
+        width: 100%;
+        height: 100%;
     }
     /**HEADER **/
     header {
@@ -57,10 +60,7 @@
             }
         }
     }
-    /** LOADING PAGE **/
-    .loading {
-        width: 100%;
-    }
+    
 
     /******** ACCUEIL ***/
 
